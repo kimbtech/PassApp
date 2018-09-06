@@ -1,6 +1,6 @@
 /**
  * Class to save data in localStorage.
- * Internally uses JSON, so only JSONable data can be saved and will be loaded the same way
+ * Internally uses JSON, so only JSONable data can be saved and can be loaded.
  */
 class DataSaver{
 
@@ -15,6 +15,9 @@ class DataSaver{
 			} catch (error) {
 				this.data = {};	
 			}
+		}
+		if( this.data == null || typeof this.data == "undefined" ){
+			this.data = {};
 		}
 	}
 

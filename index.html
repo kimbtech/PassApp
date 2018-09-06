@@ -16,6 +16,9 @@
 
 		<link href="sys/my.css" rel="stylesheet">
 		<script src="sys/dataSaverClass.js"></script>
+		<script src="sys/passwGenClass.js"></script>
+		<script src="sys/helperFunctions.js"></script>
+		<script src="sys/guiSetup.js"></script>
 		<script src="sys/init.js"></script>
 	</head>
 	<body>
@@ -28,33 +31,39 @@
 		<div class="mainsite">
 
 				<div class="box">
-					<select id="typeChooser" class="">
-						<option value="justPass">Just password</option>
-						<option value="typDest">Typical destinations</option>
-						<option value="othDest">Other destination</option>
-					</select>
+					<center>
+						<select id="typeChooser" class="">
+							<option value="justPass">Just password</option>
+							<option value="typDest">Typical destinations</option>
+							<option value="othDest">Other destination</option>
+						</select>
+					</center>
 				</div>
 
 				<div class="input box">
-					<input type="password" autocomplete="off" id="password" placeholder="Main password" class="">
+					<center>
+						<input type="password" autocomplete="off" id="password" placeholder="Main password" class="twothirdsize">
 
-					<input type="text" autocomplete="off" id="secondPart" placeholder="Destination" class="hidden">
-					<select id="destChooser" class="typDestList hidden">
-						<option>Facebook</option>
-						<option>Google</option>
-						<option>E-Mail</option>
-						<option>Twitter</option>
-						<option>Instagram</option>
-						<option>iCloud</option>
-						<option>Moodle</option>
-						<option>Microsoft</option>
-						<option>GitHub</option>
-						<option>Bitbucket</option>
-					</select>
+						<input type="text" autocomplete="off" id="secondPart" placeholder="Destination" class="hidden thirdsize">
+						<select id="destChooser" class="typDestList hidden thirdsize">
+							<option>Facebook</option>
+							<option>Google</option>
+							<option>E-Mail</option>
+							<option>Twitter</option>
+							<option>Instagram</option>
+							<option>iCloud</option>
+							<option>Moodle</option>
+							<option>Microsoft</option>
+							<option>GitHub</option>
+							<option>Bitbucket</option>
+						</select>
+					</center>
 				</div>
 
 				<div class="output box">
-					<button class="generate">Generate</button>
+					<center>
+						<button class="generate">Generate</button>
+					</center>
 				</div>
 				
 				<div class="output box">
@@ -62,8 +71,8 @@
 						<button id="copyButton">Copy</button>
 					</p>
 					<p class="outputtexts">
-						<input type="password" autocomplete="off" readonly="readonly" id="resultHidden" class="">
-						<input type="text" autocomplete="off" readonly="readonly" id="resultHidden" class="hidden">
+						<input type="password" autocomplete="off" readonly="readonly" id="resultHidden" class=" fullsize">
+						<input type="text" autocomplete="off" readonly="readonly" id="resultVisible" class="hidden">
 					</p>
 				</div>
 		</div>

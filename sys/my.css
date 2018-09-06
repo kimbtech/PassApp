@@ -14,7 +14,7 @@ textarea,input,button,select{
 	min-width: 300px;
 	max-width: 900px;
 
-	background-color:whitesmoke;
+	background-color:lightgray;
 	box-shadow: 5px 5px 2px gray;
 	border-radius: 4px;
 	margin: auto;
@@ -57,4 +57,28 @@ div.footer{
 div.footer a, div.footer a:hover, div.footer a:active, div.footer a:visited{
 	color: lightgrey;
 	text-decoration: none;
+}
+
+.box{
+	margin: 10px;
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid black;
+}
+
+.output{
+	background-color: darkgray;
+}
+
+.input{
+	background-color: white;
+}
+
+.twothirdsize{
+	width: 60%;
+	text-align: center;
+}
+.thirdsize{
+	width: 30%;
+	text-align: center;
 }

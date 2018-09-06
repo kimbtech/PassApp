@@ -26,33 +26,38 @@
 		</div>
 		
 		<div class="mainsite">
-				<select id="typeChooser" class="">
-					<option value="justPass">Just password</option>
-					<option value="typDest">Typical destinations</option>
-					<option value="othDest">Other destination</option>
-				</select>
 
-				<input type="password" autocomplete="off" id="password" placeholder="Main password" class="">
+				<div class="box">
+					<select id="typeChooser" class="">
+						<option value="justPass">Just password</option>
+						<option value="typDest">Typical destinations</option>
+						<option value="othDest">Other destination</option>
+					</select>
+				</div>
 
-				<input type="text" autocomplete="off" id="secondPart" placeholder="Destination" class="">
-				<select id="destChooser" class="typDestList">
-					<option>Facebook</option>
-					<option>Google</option>
-					<option>E-Mail</option>
-					<option>Twitter</option>
-					<option>Instagram</option>
-					<option>iCloud</option>
-					<option>Moodle</option>
-					<option>Microsoft</option>
-					<option>GitHub</option>
-					<option>Bitbucket</option>
-				</select>
+				<div class="input box">
+					<input type="password" autocomplete="off" id="password" placeholder="Main password" class="">
 
-				<div class="output">
+					<input type="text" autocomplete="off" id="secondPart" placeholder="Destination" class="hidden">
+					<select id="destChooser" class="typDestList hidden">
+						<option>Facebook</option>
+						<option>Google</option>
+						<option>E-Mail</option>
+						<option>Twitter</option>
+						<option>Instagram</option>
+						<option>iCloud</option>
+						<option>Moodle</option>
+						<option>Microsoft</option>
+						<option>GitHub</option>
+						<option>Bitbucket</option>
+					</select>
+				</div>
+
+				<div class="output box">
 					<button class="generate">Generate</button>
 				</div>
 				
-				<div class="output">
+				<div class="output box">
 					<p class="copy">
 						<button id="copyButton">Copy</button>
 					</p>

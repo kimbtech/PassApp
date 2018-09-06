@@ -23,12 +23,17 @@ class PassGen{
 			this.input = password;
 		}
 		else{
+			addition = addition.replace( /[^A-Za-z0-9]*/g , "" );
+			addition = addition.toLowerCase()
 			this.input = password + "<->" +  addition;
 		}
 
 		this.hash();
 		if( this.output.length > 20 ){
 			this.output = this.output.substring(0,20);
+		}
+		if( this.output.replace( /[A-Za-z]*/g , "" ) == "" ){
+			this.output = this.output.substring(0,5) + "+" + this.output.substring(6,10) + "0" + this.output.substring(11,20); 
 		}
 		return this.output;
 	}

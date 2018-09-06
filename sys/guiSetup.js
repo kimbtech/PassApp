@@ -89,6 +89,8 @@ function guiSetup(){
 					setHash( Generator.generate( $( inputPasswordElement ).val(), $( inputOtherDest ).val() ) );
 					break;
 			}
+			Saver.set( $( inputOtherDest ).val(), "othDest" );
+			Saver.set( $( selectDestChooser ).val(), "typDest" );
 			Generator.cleanUp(); // clean memory
 		}
 

@@ -32,7 +32,7 @@ class DataSaver{
 		}
 		else{
 			if( param != null ){
-				return this.data.param;
+				return this.data[param];
 			}
 			else{
 				return this.data
@@ -47,7 +47,7 @@ class DataSaver{
 	 */
 	set( data, param){
 		if( param != null ){
-			this.data.param = data;
+			this.data[param] = data;
 		}
 		else {
 			this.data = data;

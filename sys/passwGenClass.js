@@ -16,6 +16,9 @@ class PassGen{
 	 * @returns the password
 	 */
 	generate(password, addition){
+		if( password == null || typeof password == "undefined" || password == ""  ){
+			return "";
+		}
 		if( typeof addition == "undefined" || addition == null){
 			this.input = password;
 		}
@@ -24,6 +27,9 @@ class PassGen{
 		}
 
 		this.hash();
+		if( this.output.length > 20 ){
+			this.output = this.output.substring(0,20);
+		}
 		return this.output;
 	}
 

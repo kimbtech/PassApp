@@ -17,7 +17,6 @@
 		<link href="sys/my.css" rel="stylesheet">
 		<script src="sys/dataSaverClass.js"></script>
 		<script src="sys/passwGenClass.js"></script>
-		<script src="sys/helperFunctions.js"></script>
 		<script src="sys/guiSetup.js"></script>
 		<script src="sys/init.js"></script>
 	</head>
@@ -62,7 +61,7 @@
 
 				<div class="output box">
 					<center>
-						<button class="generate">Generate</button>
+						<button id="generate">Generate</button>
 					</center>
 				</div>
 				
@@ -71,8 +70,8 @@
 						<button id="copyButton">Copy</button>
 					</p>
 					<p class="outputtexts">
-						<input type="password" autocomplete="off" readonly="readonly" id="resultHidden" class=" fullsize">
-						<input type="text" autocomplete="off" readonly="readonly" id="resultVisible" class="hidden">
+						<input type="password" autocomplete="off" readonly="readonly" id="resultHidden" class="fullsize">
+						<input type="text" autocomplete="off" readonly="readonly" id="resultVisible" class="fullsize hidden">
 					</p>
 				</div>
 		</div>

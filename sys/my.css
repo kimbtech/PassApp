@@ -1,0 +1,60 @@
+body{
+	font-family: Ubuntu, sans-serif;
+	font-size: 110%;
+	background: url( "../img/kimb_bg.png" ) repeat scroll center top #333;
+}
+
+textarea,input,button,select{
+	font-family: Ubuntu, sans-serif;
+	font-size: 100%;
+}
+
+.mainsite{
+	width: 95%;
+	min-width: 300px;
+	max-width: 900px;
+
+	background-color:whitesmoke;
+	box-shadow: 5px 5px 2px gray;
+	border-radius: 4px;
+	margin: auto;
+	padding: 10px;
+}
+
+.hidden{
+	display: none;
+}
+
+div.header{
+	width: 95%;
+	min-width: 300px;
+	max-width: 900px;
+	margin: auto;
+	padding: 10px;
+	color: white;
+}
+div.header span.first{
+	font-size: 2em;
+	font-weight: bold;
+}
+div.header span.second{
+	padding-left:20px;
+	font-size: 1em;
+	font-style: italic;
+}
+
+
+div.footer{
+	width: 95%;
+	min-width: 300px;
+	max-width: 900px;
+	margin: auto;
+	padding: 10px;
+	color: lightgrey;
+	font-size: 0.7em;
+	text-align: center;
+}
+div.footer a, div.footer a:hover, div.footer a:active, div.footer a:visited{
+	color: lightgrey;
+	text-decoration: none;
+}

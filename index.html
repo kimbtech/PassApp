@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon; charset=binary">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon; charset=binary">
+		
+		<title>PassApp by KIMB-technologies</title>
+		<meta name="description" content="The new way to have unlimited different passwords and remeber only one.">
+		<meta name="keywords" content="passwords, app, manager, password manager">
+
+		<script src="libs/jquery.min.js"></script>
+		<script src="libs/hashes.min.js"></script>
+		<script src="libs/clipboard.min.js"></script>
+
+		<link href="sys/my.css" rel="stylesheet">
+		<script src="sys/dataSaverClass.js"></script>
+		<script src="sys/init.js"></script>
+	</head>
+	<body>
+
+		<div class="header">
+			<span class="first">PassApp</span>
+			<span class="second">by KIMB-technologies</span>
+		</div>
+		
+		<div class="mainsite">
+				<select id="typeChooser" class="">
+					<option value="justPass">Just password</option>
+					<option value="typDest">Typical destinations</option>
+					<option value="othDest">Other destination</option>
+				</select>
+
+				<input type="password" autocomplete="off" id="password" placeholder="Main password" class="">
+
+				<input type="text" autocomplete="off" id="secondPart" placeholder="Destination" class="">
+				<select id="destChooser" class="typDestList">
+					<option>Facebook</option>
+					<option>Google</option>
+					<option>E-Mail</option>
+					<option>Twitter</option>
+					<option>Instagram</option>
+					<option>iCloud</option>
+					<option>Moodle</option>
+					<option>Microsoft</option>
+					<option>GitHub</option>
+					<option>Bitbucket</option>
+				</select>
+
+				<div class="output">
+					<button class="generate">Generate</button>
+				</div>
+				
+				<div class="output">
+					<p class="copy">
+						<button id="copyButton">Copy</button>
+					</p>
+					<p class="outputtexts">
+						<input type="password" autocomplete="off" readonly="readonly" id="resultHidden" class="">
+						<input type="text" autocomplete="off" readonly="readonly" id="resultHidden" class="hidden">
+					</p>
+				</div>
+		</div>
+
+		<div class="footer">
+			<p>Visit on <a href="https://github.com/kimbtech/PassApp" target="_blank">GitHub</a>, released under terms of <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>.</p>
+			<p>&copy; 2018 by <a href="https://github.com/kimbtech/" target="_blank">KIMB-technologies<a></p>
+		</div>
+	</body>
+</html>

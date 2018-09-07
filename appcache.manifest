@@ -1,5 +1,15 @@
 CACHE MANIFEST
-# Version ??
+# Version 07-09-2018-12:00
 
 CACHE:
-index.php
+index.html
+libs/jquery.min.js
+libs/hashes.min.js
+libs/clipboard.min.js
+sys/my.css
+sys/dataSaverClass.js
+sys/passwGenClass.js
+sys/guiSetup.js
+img/favicon.ico
+img/kimb_bg.png
+img/passApp.png

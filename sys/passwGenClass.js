@@ -1,4 +1,10 @@
 /**
+ * PassApp by KIMB-technologies
+ * (c) 2018, released unter terms of MIT License
+ * https://github.com/kimbtech/PassApp
+ */
+
+/**
  * Password generator class
  */
 class PassGen{
@@ -32,7 +38,7 @@ class PassGen{
 		if( this.output.length > 20 ){
 			this.output = this.output.substring(0,20);
 		}
-		if( this.output.replace( /[A-Za-z]*/g , "" ) == "" ){
+		if( this.output.replace( /[A-Za-z0-9]*/g , "" ) == "" || this.output.replace( /[A-Za-z]*/g , "" ) == "" ){
 			this.output = this.output.substring(0,5) + "+" + this.output.substring(6,10) + "0" + this.output.substring(11,20); 
 		}
 		return this.output;

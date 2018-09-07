@@ -1,3 +1,9 @@
+/**
+ * PassApp by KIMB-technologies
+ * (c) 2018, released unter terms of MIT License
+ * https://github.com/kimbtech/PassApp
+ */
+
 //public callabels
 var guiSetup_setHash;
 
@@ -14,6 +20,7 @@ function guiSetup(){
 	const inputPasswordElement = "input#password";
 	const selectDestChooser = "select#destChooser";
 	const inputOtherDest = "input#secondPart";
+	const clearButton = "button#clearButton";
 
 	/**
 	 * init, put to clipboard
@@ -104,6 +111,9 @@ function guiSetup(){
 	}
 	generateButton();
 
+	/**
+	 * Hashes im Input Feld
+	 */
 	function hashView(){
 		var timeout;
 		$( hashHiddenElement ).on( "click", function (){
@@ -123,4 +133,41 @@ function guiSetup(){
 		});
 	}
 	hashView();
+
+	/**
+	 * aus LocalStorage laden
+	 */
+	function loadLocalStorage(){
+		if( Saver.get("othDest") != undefined ){
+			$( inputOtherDest ).val( Saver.get("othDest") );
+		}
+		if( Saver.get("typDest") != undefined ){
+			$( selectDestChooser ).val( Saver.get("typDest") );
+			$( selectDestChooser ).change();
+		}
+		if( Saver.get("typeChooser") != undefined ){
+			$( typeChooserSelect ).val( Saver.get("typeChooser") );
+			$( typeChooserSelect ).change();
+		}
+	}
+	loadLocalStorage();
+
+	/**
+	 * Alles leeren Button
+	 */
+	function clearButtonInit(){
+		$( clearButton ).on( "click" , function (){
+			setHash("");
+			Generator.cleanUp();
+			Saver.clear();
+			$( inputPasswordElement ).val("");
+			$( inputOtherDest ).val("");
+			$( selectDestChooser ).val( $( selectDestChooser +  " option" )[0].innerHTML );
+			$( typeChooserSelect ).val( $( typeChooserSelect +  " option" )[0].value );
+
+			$( selectDestChooser ).change();
+			$( typeChooserSelect ).change();
+		});
+	}
+	clearButtonInit();
 }

@@ -1,4 +1,10 @@
 /**
+ * PassApp by KIMB-technologies
+ * (c) 2018, released unter terms of MIT License
+ * https://github.com/kimbtech/PassApp
+ */
+
+/**
  * Class to save data in localStorage.
  * Internally uses JSON, so only JSONable data can be saved and can be loaded.
  */

@@ -79,6 +79,8 @@ div.footer a, div.footer a:hover, div.footer a:active, div.footer a:visited{
 	width: 95%;
 	text-align: left;
 	margin-left: 2.5%;
+	margin-right: 2.5%;
+	padding:0;
 }
 .copy{
 	margin-left: 2.5%;

@@ -24,6 +24,7 @@
 		<script src="sys/dataSaverClass.js"></script>
 		<script src="sys/passwGenClass.js"></script>
 		<script src="sys/guiSetup.js"></script>
+		<script src="sys/hintsOverlay.js"></script>
 		<script>
 			//classes
 			var Saver = new DataSaver();
@@ -32,6 +33,7 @@
 			//load, if gui ready
 			$( function () {
 				guiSetup();
+				hintsOverlay();
 			});
 		</script>
 	</head>
@@ -40,6 +42,8 @@
 		<div class="header">
 			<span class="first">PassApp</span>
 			<span class="second">by KIMB-technologies</span>
+
+			<button id="openHints">About</button>
 		</div>
 		
 		<div class="mainsite">
@@ -90,11 +94,96 @@
 						<input type="text" autocomplete="off" readonly="readonly" id="resultVisible" class="fullsize hidden">
 					</p>
 				</div>
+
+				<div id="smallnotice" class="smallnotice">
+					The generated passwords are only as secure as the main password, so take 
+					care to have a strong one.<br />
+					The developer of this app gives no warranty and is not responsible for any faults or missuses.
+				</div>
 		</div>
 
 		<div class="footer">
 			<p>Visit on <a href="https://github.com/kimbtech/PassApp" target="_blank">GitHub</a>, released under terms of <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>.</p>
-			<p>&copy; 2018 by <a href="https://github.com/kimbtech/" target="_blank">KIMB-technologies<a></p>
+			<p>&copy; 2018 by <a href="https://github.com/kimbtech/" target="_blank">KIMB-technologies</a></p>
+		</div>
+
+		<div id="hintsOverlay" class="hidden">
+			<div class="overlay">
+			</div>
+			<div class="overlaycontent">
+				<h1>PassApp</h1>
+				<em>The new way to have unlimited different passwords and remember only one.</em>
+				<div class="box">
+					<h3>Why this app?</h3>
+					<p>
+						Nowadays one needs to remember dozens of passwords, each of it has to be unique and
+						meet some strength requirements. But that's not always possible.
+					</p>
+					<p>
+						So there are some ways to master this challenge. One only has a few passwords
+						and uses them multiple times, maybe with some small changes. But if one password is leaked,
+						others are also.
+					</p>
+					<p>
+						The other possibility is to use a password manager, but it is much work to set it up and
+						if it gets hacked, all passwords are leaked.
+					</p>	
+				</div>
+				<div class="box">
+					<h3>How does this app work?</h3>
+					<p>
+						This app generates unlimited unique and strong passwords
+						out of one password.
+						So one only has to remember the main password.
+					</p>
+					<p>
+						This app uses a one direction algorithm to generate the unique passwords.
+						Each time the main password is added to the use case (e.g. Facebook, Mail) and 
+						given to this algorithmus. Just having the output it is impossible to calculate
+						the input data.
+					</p>
+					<p>
+						All the generated passwords are different and strong, also it is not really possible 
+						to guess the password for Facebook if you know the one for Twitter.
+					</p>
+					<p style="color: red; font-weight: bold">
+						The generated passwords always have the same quality, also if your main password is just
+						&quot;test&quot;.<br />
+						But a weak main password can be brute forced if one knows one generated password.
+						(If you know the Twitter password, you can test all main passwords until the generated
+						matches the known.)
+					</p>
+				</div>
+				<div class="box">
+					<h3>How to use the app?</h3>
+					<p>
+						Just take one good password, it should be unique and strong. And you will have 
+						to remember that main password.
+					</p>
+					<p>
+						To get the password for a service you just have to type your main password in 
+						the &quot;Main password&quot; field.  Also, you have to specify the use case for which the 
+						password should be generated (type your own or choose from dropdown).
+						Afterwards the password for the chosen destination can be copied.
+					</p>
+					<p>
+						Every time you need the password for the use case, you just need your main password
+						and the web app will generate your password again.
+					</p>
+				</div>
+				<div class="box">
+					<h3>Links</h3>	
+					<p><a href="https://kimbtech.github.io/PassApp/" target="_blank">WepApp</a></p>
+					<p><a href="https://github.com/kimbtech/PassApp" target="_blank">GitHub/ Sourcecode</a></p>
+					<p><a href="https://github.com/kimbtech/PassApp/issues" target="_blank">Issue Tracker</a></p>
+					<p><a href="https://github.com/kimbtech/" target="_blank">KIMB-technologies</a>
+				</div>
+				<div class="box">
+					<center>
+						<button id="closeHints">Close</button>
+					</center>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

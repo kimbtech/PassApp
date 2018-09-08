@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Version 07-09-2018-12:00
+# Version 08-09-2018-14:20
 
 CACHE:
 index.html
@@ -10,6 +10,7 @@ sys/my.css
 sys/dataSaverClass.js
 sys/passwGenClass.js
 sys/guiSetup.js
+sys/hintsOverlay.js
 img/favicon.ico
 img/kimb_bg.png
 img/passApp.png

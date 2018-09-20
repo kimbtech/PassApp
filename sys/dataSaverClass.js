@@ -1,7 +1,7 @@
 /**
  * PassApp by KIMB-technologies
  * (c) 2018, released unter terms of BSD-3-Clause License
- * https://github.com/kimbtech/PassApp
+ * https://github.com/KIMB-technologies/PassApp
  */
 
 /**
